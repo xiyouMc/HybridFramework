@@ -36,12 +36,12 @@ Hybrid也已经火了很长一段时间了，但是一直有人不知从何入�
 以上只是Demo的一部分效果，具体的可以见[Demo-Android](https://github.com/xiyouMc/HybridFramework/tree/master/demo_android)中.
 
 ### 技术点
-
-1. 重构WebView和WebViewClient生命周期中的所有方法
-2. 依赖[AppDynamicFramework](https://github.com/xiyouMc/AppDynamicFramework)，来动态加载Hybrid框架，即 `jniLibs/armeabi/libh5core.so`
-3. 通过注解自定义Hybrid扩展事件
-4. CreatePage()可将Hybrid页面嵌入到其他View
-5. 等等的
+1. 通过注入 `JSBridge` 来无缝调用H5和Native
+2. 重构WebView和WebViewClient生命周期中的所有方法
+3. 依赖[AppDynamicFramework](https://github.com/xiyouMc/AppDynamicFramework)，来动态加载Hybrid框架，即 `jniLibs/armeabi/libh5core.so`
+4. 通过注解自定义Hybrid扩展事件
+5. CreatePage()可将Hybrid页面嵌入到其他View
+6. 等等的
 
 
 ## Contact me
