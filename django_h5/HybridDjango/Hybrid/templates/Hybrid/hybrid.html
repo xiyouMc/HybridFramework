@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+<head>
+<title>HybridFramework Debug！</title>
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<li>
+   <u><a herf = "javascript:;"  onclick="checkJSApi()" >检查Toast接口是否存在，CheckJSApi()</a> </u>
+</li>
+<br/>
+<li>
+   <u><a herf = "javascript:;"  onclick="showTitle()" >显示标题栏</a> </u>
+</li>
+<br/>
+<li>
+   <u><a herf = "javascript:;"  onclick="hideTitle()" >隐藏标题栏</a> </u>
+</li>
+<br/>
+<!--<li>
+   <u><a herf = "javascript:;"  onclick="showOptionMenu()" >显示右上角菜单栏</a> </u>
+</li>
+<br/>-->
+<li>
+   <u><a herf = "javascript:;"  onclick="setTitle()" >设置标题</a> </u>
+</li>
+<br/>
+<li>
+   <u><a herf = "javascript:;"  onclick="toast()" >Toast()</a> </u>
+</li>
+<br/>
+
+<li>
+   <u><a herf = "javascript:;"  onclick="alertH()" >alert()</a> </u>
+</li>
+<br/>
+
+<li>
+   <u><a herf = "javascript:;"  onclick="confirm()" >confirm()</a> </u>
+</li>
+<br/>
+
+<li>
+   <u><a herf = "javascript:;"  onclick="loading()" >显示加载，loading()</a> </u>
+</li>
+<br/>
+
+<li>
+   <u><a herf = "javascript:;"  onclick="hideLoading()" >隐藏加载，hideLoading()</a> </u>
+</li>
+<br/>
+
+<li>
+   <u><a herf = "javascript:;"  onclick="openInBrowser()" >在浏览器打开百度</a> </u>
+</li>
+<br/>
+
+<li>
+   <u><a herf = "javascript:;"  onclick="pushWindow()" >push一个新的页面，pushWindow</a> </u>
+</li>
+<br/>
+
+<li>
+   <u><a herf = "javascript:;"  onclick="popWindow()" >pop当前页面，popWindow</a> </u>
+</li>
+<br/>
+
+<li>
+   <u><a herf = "javascript:;"  onclick="getNetwordType()" >获取网络状态</a> </u>
+</li>
+<br/>
+
+<li>
+   <u><a herf = "javascript:;"  onclick="vibrate()" >震动</a> </u>
+</li>
+<br/>
+
+<li>
+   <u><a herf = "javascript:;"  onclick="watchShake()" >摇一摇</a> </u>
+</li>
+<br/>
+
+<li>
+   <u><a herf = "javascript:;"  onclick="closeWeb()" >关闭Webview</a> </u>
+</li>
+<br/>
+<script type="text/javascript">
+   document.addEventListener('JSBridgeReady', function () {
+        console.log(typeof JSBridge);
+   }, false);
+
+   document.addEventListener('resume', function (event) {
+        console.log(event.data);
+        console.log(event.resumeParams);
+   });
+
+   document.addEventListener('back', function (e) {
+        e.preventDefault();
+        JSBridge.call('popTo', {index: 0});
+   }, false);
+
+   function checkJSApi(){
+    JSBridge.call('checkJSAPI', {
+             api: 'toast'
+    }, function (result) {
+            console.log(result.available);
+            alert(result.available)
+    });
+   }
+
+   function showTitle(){
+       JSBridge.call("showTitlebar");
+   }
+   function hideTitle(){
+       JSBridge.call('hideTitlebar')
+   }
+   function showOptionMenu(){
+       JSBridge.call("showOptionMenu");
+   }
+
+   function hideOptionMenu(){
+       JSBridge.call("hideOptionMenu");
+   }
+   
+   function setTitle(){
+       JSBridge.call("setTitle", {
+            title: 'Hello',
+            subtitle: '杭州'  //8.2
+        });
+   }
+
+   function toast(){
+       JSBridge.call('toast', {
+        content: 'Toast测试',
+        type: 'success',
+        duration: 3000
+        }, function(){
+        //  alert("toast消失后执行");
+        });
+   }
+   function alertH(){
+       JSBridge.call('alert',{
+           title:'标题',
+           message:"你好",
+           button:'确定'
+       },function(){
+           alert('alert dissmissed!!!')
+       })
+   }
+   function confirm(){
+       JSBridge.call('confirm', {
+ title: '标题',
+ message: '确定？',
+ okButton: '确定',
+ cancelButton: '算了'
+}, function (result) {
+ alert(result.ok);
+});
+   }
+function loading(){
+       JSBridge.call('showLoading', {
+ text: '加载中',
+ delay: 1000
+});
+   }
+
+   function hideLoading(){
+       JSBridge.call('hideLoading');
+   }
+   function openInBrowser(){
+       JSBridge.call('openInBrowser', {
+    url: 'https://www.baidu.com/'
+   });
+   }
+
+   function pushWindow(){
+       JSBridge.call('pushWindow', {
+     url: window.location.href,
+  param: {
+      readTitle: true,
+      defaultTitle: true,
+      showToolBar: false
+  }
+  });
+   }
+function popWindow(){
+    JSBridge.call('popWindow',{
+data: {
+}
+});
+}
+function getNetwordType(){
+    JSBridge.call('getNetworkType', function (result) {
+      alert(result.networkType);
+  });
+}
+
+function vibrate(){
+    JSBridge.call('vibrate');
+}
+
+function watchShake(){
+    JSBridge.call('watchShake', function(){
+   alert('摇动了!!!')
+   });
+}
+function closeWeb(){
+    JSBridge.call('closeWebview');
+}
+
+</script>
+</body>
+</html>

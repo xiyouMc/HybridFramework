@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+<head>
+<title>HybridFramework Debug！</title>
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<li>
+   <u><a herf = "javascript:;"  onclick="add()" >通过自定义的插件来通过Android计算1+1</a> </u>
+</li>
+<br/>
+
+<script type="text/javascript">
+function add(){
+    JSBridge.call('add',{
+        a:1,
+        b:1
+    },function(result){
+        alert(result.c)
+        console.log(result)
+    })
+}
+</script>
+</body>
+</html>
