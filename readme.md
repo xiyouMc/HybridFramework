@@ -9,7 +9,22 @@ Hybrid也已经火了很长一段时间了，但是一直有人不知从何入�
 ### 废话不多讲，先来看效果展示
 
 
-#### 启动Hybrid页面
+#### 1. 启动Hybrid页面
 
 <img src=https://github.com/xiyouMc/HybridFramework/blob/master/img/start_hybrid.gif width=300px>
+<br>
+
+#### 2. 检测Hybrid默认支持的事件 (以Toast为例)
+
+<img src=https://github.com/xiyouMc/HybridFramework/blob/master/img/checkjsapi.gif width=300px>
+<br>
+
+#### 3.  隐藏TitleBar 
+
+<img src=https://github.com/xiyouMc/HybridFramework/blob/master/img/hide_title.gif width=300px>
+<br>
+
+#### 4.  显示TitleBar 
+
+<img src=https://github.com/xiyouMc/HybridFramework/blob/master/img/show_title.gif width=300px>
 <br>
