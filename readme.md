@@ -33,7 +33,7 @@ Hybrid也已经火了很长一段时间了，但是一直有人不知从何入�
 
 -----
 
-以上支持Demo的一部分效果，具体的可以见[Demo-Android](https://github.com/xiyouMc/HybridFramework/tree/master/demo_android)中.
+以上只是Demo的一部分效果，具体的可以见[Demo-Android](https://github.com/xiyouMc/HybridFramework/tree/master/demo_android)中.
 
 ### 技术点
 
