@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22"
+
+    defaultConfig {
+        applicationId "top.alision.hybridframework"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    flatDir {
+        dirs'libs'
+    }
+}
+
+dependencies {
+    compile(name:'h5api', ext:'aar')
+    compile files('libs/framework.jar')
+    compile 'com.android.support:support-v4:22.0.0'
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="h5_nav_menu_pressed">#FF20273F</color>
+    <color name="h5_nav_menu_normal">#FF30374F</color>
+    <color name="h5_nav_menu_divider">#FF20273F</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#ff000000</color>
+    <color name="gray">#ff999999</color>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HybridFramework</string>
+    <string name="start_page">启动Hybrid Demo</string>
+    <string name="coustom_start">自定义的扩展接口</string>
+    <string name="title"></string>
+    <string name="content">      这是一个Hybrid框架的Demo，通过插件化动态加载Hybrid并可支持接口的扩展。</string>
+</resources>

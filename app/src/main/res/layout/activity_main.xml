@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="top.alision.hybridframework.MainActivity"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="简介"
+              android:textColor="@color/black"
+              android:textSize="12pt"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="@string/content"
+              android:textColor="@color/black"
+              android:textSize="20sp"
+              android:padding="20dp"
+    android:layout_marginTop="100dp"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/start_page"
+            android:text="@string/start_page"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/coustom_start"
+            android:text="@string/coustom_start"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+</LinearLayout>
