@@ -11,5 +11,5 @@ Hybrid也已经火了很长一段时间了，但是一直有人不知从何入�
 
 #### 启动Hybrid页面
 
-<img src=https://github.com/xiyouMc/HybridFramework/blob/master/img/start_hybrid.gif?raw=true width=300px>
+<img src=https://github.com/xiyouMc/HybridFramework/blob/master/img/start_hybrid.gif width=300px>
 <br>
