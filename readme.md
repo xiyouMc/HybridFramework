@@ -1,5 +1,6 @@
 ## HybridFramework
 
+## [Wiki](https://github.com/xiyouMc/HybridFramework/wiki/%E7%AE%80%E4%BB%8B)
 ### 引言
 
 Hybrid也已经火了很长一段时间了，但是一直有人不知从何入手。
